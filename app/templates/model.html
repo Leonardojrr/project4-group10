@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Risk Predictor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/logic.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/map">Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about_us">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/works_cited">Works Cited</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="card border-primary mb-3 text-center">
+            <div class="card-header text-center">
+                <h5><strong>Enter transaction data to predict fraud risk.</strong></h5>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <!-- Distance from Home -->
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="distance_from_home">Distance from Home:</label>
+                            <input type="number" step="0.01" class="form-control" id="distance_from_home" value="14">
+                        </div>
+                    </div>
+                    <!-- Distance from Last Transaction -->
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="distance_from_last_transaction">Distance from Last Transaction:</label>
+                            <input type="number" step="0.01" class="form-control" id="distance_from_last_transaction" value="2">
+                        </div>
+                    </div>
+                    <!-- Ratio to Median Purchase Price -->
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="ratio_to_median_purchase_price">Ratio to Median Purchase Price:</label>
+                            <input type="number" step="0.01" class="form-control" id="ratio_to_median_purchase_price" value="8.27">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-3">
+                    <!-- Repeat Retailer -->
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="repeat_retailer">
+                            <label class="form-check-label" for="repeat_retailer">Repeat Retailer</label>
+                        </div>
+                    </div>
+                    <!-- Used Chip -->
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="used_chip" checked>
+                            <label class="form-check-label" for="used_chip">Used Chip</label>
+                        </div>
+                    </div>
+                    <!-- Used PIN Number -->
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="used_pin_number">
+                            <label class="form-check-label" for="used_pin_number">Used PIN Number</label>
+                        </div>
+                    </div>
+                    <!-- Online Order -->
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="online_order">
+                            <label class="form-check-label" for="online_order">Online Order</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="row mt-4">
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-primary" id="predict">Check Fraud Risk</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="color:lightgray; border-width: 3px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h2 id="output"></h2>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
