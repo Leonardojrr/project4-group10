@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Fraud Detection</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar component -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <i class="bi bi-shield-fill-plus fs-3 text-white"></i>
+        <a class="ps-2 navbar-brand" href="#">FraudShield</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about/about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Page Content -->
+    <div class="container mt-5">
+      <div class="text-center">
+        <h1 class="display-4">Welcome to FraudShield</h1>
+        <i class="bi bi-shield-fill-plus fs-2"></i>
+        <p class="lead">
+          We leverage data-driven techniques to detect and prevent fraudulent
+          card transactions in real-time.
+        </p>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <h3>How We Detect Fraud</h3>
+          <p>
+            Our detection system analyzes key transaction features using
+            intelligent algorithms to identify suspicious activity. Here are the
+            main fields we use:
+          </p>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Distance from Home:</strong> Checks if the transaction
+              location is unusually far from the cardholder’s registered
+              address.
+            </li>
+            <li class="list-group-item">
+              <strong>Distance from Last Transaction:</strong> Measures how far
+              this transaction is from the previous one, to detect unlikely
+              travel patterns.
+            </li>
+            <li class="list-group-item">
+              <strong>Ratio to Median Purchase Price:</strong> Compares
+              transaction amount to the cardholder's typical spending habits.
+            </li>
+            <li class="list-group-item">
+              <strong>Repeat Retailer:</strong> Indicates if the merchant is one
+              the cardholder has used before.
+            </li>
+            <li class="list-group-item">
+              <strong>Used Chip:</strong> Validates whether the chip on the card
+              was used, increasing transaction security.
+            </li>
+            <li class="list-group-item">
+              <strong>Used PIN Number:</strong> Confirms if the user
+              authenticated with a PIN code.
+            </li>
+            <li class="list-group-item">
+              <strong>Online Order:</strong> Flags transactions made over the
+              internet, which are typically more prone to fraud.
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <h3>Why It Matters</h3>
+          <p>
+            Credit card fraud is not just an inconvenience—it's a global issue
+            that results in
+            <strong>over $30 billion in losses annually</strong>. For consumers,
+            it means lost money, frozen accounts, and hours spent recovering
+            from unauthorized charges. For businesses and banks, it damages
+            trust and brings legal and regulatory challenges.
+          </p>
+          <p>
+            Our goal is to reduce this risk by using intelligent fraud detection
+            models that identify suspicious transactions in real time. By
+            looking at unusual patterns—like a sudden transaction from a
+            different country, or a purchase much larger than the typical
+            spend—we can
+            <strong>flag potential fraud before it causes harm</strong>.
+          </p>
+          <p>
+            Fraud detection not only protects users, but also strengthens the
+            financial ecosystem by reducing false positives and improving the
+            customer experience. It’s a win for security and convenience.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
