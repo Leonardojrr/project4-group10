@@ -39,15 +39,12 @@ function predictions() {
             //{ok: true, prediction: '0.03'}
             var prob = parseFloat(returnedData.prediction);
 
-            $("#output").text(` ${(prob )}%`);
-            // if (prob > 0.5) {
-            //     $("#output").text(`⚠️ Likely fraud — Risk score: ${(prob * 100).toFixed(2)}%`);
-            // } else {
-            //     $("#output").text(`✅ Low fraud risk — Risk score: ${(prob * 100).toFixed(2)}%`);
-            // }
+            if (prob > 0.5) {
+                $("#output").text(`⚠️ Likely fraud — Risk score: ${(prob * 100).toFixed(2)}%`);
+            } else {
+                $("#output").text(`✅ Low fraud risk — Risk score: ${(prob * 100).toFixed(2)}%`);
+            }
 
-            // Optional: call chart or other visual functions
-            // buildDonut(prob);
         },
 
         

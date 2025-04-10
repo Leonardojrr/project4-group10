@@ -18,7 +18,7 @@ modelHelper = ModelHelper()
 # HTML ROUTES - HOME
 @app.route("/")
 def home():
-    return render_template("model.html")
+    return render_template("home.html")
 
 # HTML ROUTES - TABLEAU1
 @app.route("/tableau1")
@@ -43,7 +43,7 @@ def report():
 # HTML ROUTES - ABOUT US 
 @app.route("/about_us")
 def about_us():
-    return render_template("about_us.html")
+    return render_template("about.html")
 
 # HTML ROUTES - SOURCES
 @app.route("/sources")
